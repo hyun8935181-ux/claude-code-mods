@@ -1,6 +1,6 @@
 {
   "name": "term-bar",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Terminal footer buttons: recent conversations (click to resume), model picker and effort picker.",
   "license": "MIT",
   "types": "./types/index.d.ts"

@@ -37,3 +37,20 @@ test('🕐 expands the recent conversations in the band', async ($, on) => {
   await band.press({ key: 'history-close' })
   expect(await band.find({ key: 'old' })).toBeUndefined()
 })
+
+test('picking a model the plan lacks keeps the button on the real model', async ($, on) => {
+  on('ui.render', ($, e) => {
+    const { Text } = $.ui.resolve(e)
+    return <Text>engine</Text>
+  })
+  on('session.model', () => ({ value: 'claude-sonnet-5-5' })) // Pro: Fable is refused, Sonnet kept
+  on('store.get', () => ({ value: 'medium' }))
+  on('config.list', () => ({ value: [] }))
+  on('command.list', () => ({ value: [{ name: 'model' }] }))
+  on('command.run', () => ({ text: 'Kept model as Sonnet 5.5' }))
+
+  const footer = await $.ui.mount(FOOTER)
+  await footer.press({ key: 'model' })
+  await footer.press({ key: 'pick-fable' })
+  expect((await footer.find({ key: 'model' }))?.text).toContain('Sonnet')
+})

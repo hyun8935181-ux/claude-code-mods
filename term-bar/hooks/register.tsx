@@ -86,7 +86,8 @@ const draw = async ($: Engine, e: RenderInput<"SessionMode">, next: Next<"ui.ren
         await $.store.set(EFFORT_KEY, v)
       }
     } else if (await apply($, MODEL_ROW, 'model', v)) {
-      await update($, model, () => v)
+      // Read back the real model rather than the pick: a model the plan lacks (Fable on Pro) is refused and kept.
+      await syncModel($)
     }
   }
 
