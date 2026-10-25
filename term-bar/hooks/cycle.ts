@@ -1,4 +1,5 @@
-export const MODELS = ['opus', 'sonnet', 'haiku']
+// fable is available on the Max plan; on other plans /model answers with a refusal line.
+export const MODELS = ['haiku', 'sonnet', 'opus', 'fable']
 export const EFFORTS = ['low', 'medium', 'high', 'xhigh', 'max']
 
 // The next value in the list; the first one for a value not in it.

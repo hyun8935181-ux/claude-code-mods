@@ -3,8 +3,9 @@ import { expect, test } from 'claude-code/testing'
 import { EFFORTS, MODELS, aliasOf, label, nextOf } from './cycle'
 
 test('model and effort helpers', async () => {
-  expect(nextOf(MODELS, 'opus')).toBe('sonnet')
-  expect(nextOf(MODELS, 'haiku')).toBe('opus')
+  expect(nextOf(MODELS, 'opus')).toBe('fable')
+  expect(nextOf(MODELS, 'fable')).toBe('haiku')
+  expect(aliasOf('claude-fable-5-1')).toBe('fable')
   expect(nextOf(EFFORTS, 'max')).toBe('low')
   expect(nextOf(EFFORTS, '?')).toBe('low')
   expect(aliasOf('claude-opus-5-5')).toBe('opus')

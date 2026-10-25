@@ -33,7 +33,7 @@ Context 48.3k / 1m (5%) · 918.7k free · claude-sonnet-5-5
 ```
 
 - **🕐** expands this folder's last 7 conversations above the prompt: the conversation's title (or its first message when it has none yet) and how long ago. Click one to resume it; empty conversations are left out. **✕** or 🕐 again closes it.
-- **Model ▾** / **effort ▾** expand the choices in place; the current one is highlighted.
+- **Model ▾** (Haiku → Sonnet → Opus → Fable, stronger to the right; Fable needs the Max plan) / **effort ▾** expand the choices in place; the current one is highlighted.
 - The VS Code extension already has all three, so term-bar draws nothing there.
 
 Notes:
