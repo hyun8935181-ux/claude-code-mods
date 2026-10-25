@@ -1,0 +1,7 @@
+{
+  "name": "context-meter",
+  "version": "1.0.0",
+  "description": "A color-coded context window meter above the prompt: usage by category, free space, model. Read-only.",
+  "license": "MIT",
+  "types": "./types/index.d.ts"
+}

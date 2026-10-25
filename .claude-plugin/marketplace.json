@@ -1,0 +1,8 @@
+{
+  "name": "claude-code-mods",
+  "owner": { "name": "hyun8935181-ux" },
+  "plugins": [
+    { "name": "context-meter", "source": "./context-meter", "description": "Color-coded context window meter above the prompt" },
+    { "name": "term-bar", "source": "./term-bar", "description": "Terminal footer: recent conversations, model and effort pickers" }
+  ]
+}
